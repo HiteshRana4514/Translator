@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Text Translator</title>
+</head>
+
+<body>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid" style="background-color: #5cdb95;">
+      <span class="navbar-brand mb-0 h1" style="color: #05386b;">Text Translator</span>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="left">
+      <form role="search">
+        <label for="lang">Enter targeted language:</label>
+        <input list="language" name="lang" id="lang"></input>
+        <datalist id="language">
+          <option value="Afrikaans"></option>
+          <option value="Albanian"></option>
+          <option value="Amharic"></option>
+          <option value="Arabic"></option>
+          <option value="Armenian"></option>
+          <option value="Azerbaijani"></option>
+          <option value="Basque"></option>
+          <option value="Belarusian"></option>
+          <option value="Bengali"></option>
+          <option value="Bosnian"></option>
+          <option value="Bulgarian"></option>
+          <option value="Catalan"></option>
+          <option value="Cebuano"></option>
+          <option value="Chichewa"></option>
+          <option value="Chinese (Simplified)"></option>
+          <option value="Chinese (Traditional)"></option>
+          <option value="Corsican"></option>
+          <option value="Croatian"></option>
+          <option value="Czech"></option>
+          <option value="Danish"></option>
+          <option value="Dutch"></option>
+          <option value="English"></option>
+          <option value="Esperanto"></option>
+          <option value="Estonian"></option>
+          <option value="Filipino"></option>
+          <option value="Finnish"></option>
+          <option value="French"></option>
+          <option value="Frisian"></option>
+          <option value="Galician"></option>
+          <option value="Georgian"></option>
+          <option value="German"></option>
+          <option value="Greek"></option>
+          <option value="Gujarati"></option>
+          <option value="Haitian Creole"></option>
+          <option value="Hausa"></option>
+          <option value="Hawaiian"></option>
+          <option value="Hebrew"></option>
+          <option value="Hindi"></option>
+          <option value="Hmong"></option>
+          <option value="Hungarian"></option>
+          <option value="Icelandic"></option>
+          <option value="Igbo"></option>
+          <option value="Indonesian"></option>
+          <option value="Irish"></option>
+          <option value="Italian"></option>
+          <option value="Japanese"></option>
+          <option value="Javanese"></option>
+          <option value="Kannada"></option>
+          <option value="Kazakh	"></option>
+          <option value="Khmer"></option>
+          <option value="Kinyarwanda"></option>
+          <option value="Korean"></option>
+          <option value="Kurdish "></option>
+          <option value="Kyrgyz"></option>
+          <option value="Lao"></option>
+          <option value="Latin"></option>
+          <option value="Latvian"></option>
+          <option value="Lithuanian"></option>
+          <option value="Luxembourgish"></option>
+          <option value="Macedonian"></option>
+          <option value="Malagasy"></option>
+          <option value="Malay"></option>
+          <option value="Malayalam"></option>
+          <option value="Maltese"></option>
+          <option value="Maori"></option>
+          <option value="Marathi"></option>
+          <option value="Mongolian"></option>
+          <option value="Myanmar (Burmese)"></option>
+          <option value="Nepali"></option>
+          <option value="Norwegian"></option>
+          <option value="Odia (Oriya)"></option>
+          <option value="Pashto"></option>
+          <option value="Persian"></option>
+          <option value="Polish"></option>
+          <option value="Portuguese"></option>
+          <option value="Punjabi"></option>
+          <option value="Romanian"></option>
+          <option value="Russian"></option>
+          <option value="Samoan"></option>
+          <option value="Scots Gaelic"></option>
+          <option value="Serbian"></option>
+          <option value="Sesotho"></option>
+          <option value="Shona"></option>
+          <option value="Sindhi"></option>
+          <option value="Sinhala"></option>
+          <option value="Slovak"></option>
+          <option value="Slovenian"></option>
+          <option value="Somali"></option>
+          <option value="Spanish"></option>
+          <option value="Sundanese"></option>
+          <option value="Swahili"></option>
+          <option value="Swedish"></option>
+          <option value="Tajik"></option>
+          <option value="Tamil"></option>
+          <option value="Tatar"></option>
+          <option value="Telugu"></option>
+          <option value="Thai"></option>
+          <option value="Turkish"></option>
+          <option value="Turkmen"></option>
+          <option value="Ukrainian"></option>
+          <option value="Urdu"></option>
+          <option value="Uyghur"></option>
+          <option value="Uzbek"></option>
+          <option value="Vietnamese"></option>
+          <option value="Welsh"></option>
+          <option value="Xhosa"></option>
+          <option value="Yiddish"></option>
+          <option value="Yoruba	"></option>
+          <option value="Zulu"></option>
+          <option value="Hebrew"></option>
+          <option value="Chinese (Simplified)"></option>
+        </datalist>
+        <button id="submit1">Translate</button>
+        <hr>
+        <textarea name="text" id="originalText" cols="76" rows="19"></textarea>
+      </form>
+    </div>
+    <div class="right">
+      <h3>Converted text: </h3>
+      <h3 style="float: right; margin-right: 10px;">Language</h3>
+      <hr>
+      <div class="result">
+        <p id="converted">Translated text will appear here____</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
